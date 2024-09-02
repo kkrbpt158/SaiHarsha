@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Vasavi Ladies Emporium</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="R1C1">Sri Vasavi Ladies Emporium and Stationary</div>
+    <div class="operations">
+        <button name="create">Create</button>
+        <button name="read">Refresh</button>
+        <button name="update">Update</button>
+        <button name="delete">Delete</button>
+        <button name="deleteall">Delete All</button>
+<!--        <button herf="product.html">Product Mange</button>-->
+        <button onclick="window.location.href='product.html'">Product Manage</button>
+
+        <button type="submit" id="geninvoice">Generate Invoice</button>
+        <button name="logout" style="float:right;margin-right:10px" onclick="destroy()">
+            <a href="login.php">Sign Out</a>
+        </button>
+    </div>
+</header>
+<section>
+    <main>
+    <form id="dataForm" method = "post" action="">
+<div>
+            <div class="lable">
+            <lable> Contact Person Name</lable><br><br>
+            <lable>Contact No</lable><br><br>
+            <lable>Email ID</lable><br><br>
+           <lable>District</lable><br><br>
+           <lable>State&Country</lable><br><br>
+           <lable>City&Pin</lable><br><br>
+           <lable>Date</lable><br><br>
+</div>
+<div class="input">
+              <input style="margin-bottom:15px" type="text" placeholder="Contact Person Name" id="manager_name" name="manager_name"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="Contact No" id="cust_contactno" name="cust_contactno"></input><br>
+              <input style="margin-bottom:15px"  type="email" placeholder="Email ID" id="cust_mailid"name="cust_mailid"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="District" id="cust_district"name="cust_district"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="State" id="cust_state"name="cust_state"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="City" id="cust_city"name="cust_city"></input><br>
+              <input style="margin-bottom:15px" type="date" placeholder="Date" id="date"name="date"></input><br>
+          </div>
+</div>
+<div>
+            <div class="lable1">
+            <lable>Product No</lable><br><br>
+            <lable> Product Name</lable><br><br>
+            <lable>Product Cost</lable><br><br>
+           <lable>Quantity</lable><br><br>
+           <lable>Discount</lable><br><br>
+           <lable>Total Cost</lable><br><br>
+           <button type = "submit" name="add" id="add" style="float:right;margin-right:10px">Add</button>
+
+</div>
+<div class="input1">
+              <input style="margin-bottom:15px" type="text" placeholder="Product no" id="product_no"name="product_no"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="Product Name" id="product_name"name="product_name"></input><br>
+              <input style="margin-bottom:15px"  type="text" placeholder="Product cost" id="product_cost"name="product_cost"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="Quantity" id="product_quantity"name="product_quantity"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="Discount" id="product_discount"name="product_discount"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="Total Cost" id="total_cost_f"name="total_cost"></input><br>
+              <!--<input style="margin-bottom:15px" type="text" placeholder="Search" name="search_bt"></input><br>-->
+          </div>
+</div>
+</form>
+
+    </main>
+</section>
+<div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <td>Customer Name</td>
+                <td>Customer Number</td>
+                <td>Product Name</td>
+                <td>Product Number</td>
+                <td>Product Cost</td>
+                <td>Quantity</td>
+                <td>Total Cost</td>
+                <td>Date</td>
+                <td>Edit</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="7"><strong>Total Cost:</strong></td>
+                <td id="totalcost">0</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<footer>
+    Designed by G.Sai Sathvik
+</footer>
+<script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Vasavi Ladies Emporium</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="R1C1">Sri Vasavi Product Management</div>
+    <div class="operations" >
+        <button name="read">Refresh</button>
+        <button name="update">Update</button>
+        <button name="delete">Delete</button>
+        <button name="deleteall">Delete All</button>
+        <button onclick="window.location.href='index.html'">Back</button>
+
+    </div>
+</header>
+<section>
+    <main>
+    <form id="dataForm" method = "post" action="/submit" style="padding-top:15px;">
+        <div>
+            <div class="lable">
+            <lable>Product ID</lable><br><br>
+            <lable> Product Name</lable><br><br>
+            <lable>Product Cost</lable><br><br>
+</div>
+<div class="input">
+              <input style="margin-bottom:15px" type="text" placeholder="Product ID" id="product_id" name="product_id"></input><br>
+              <input style="margin-bottom:15px" type="text" placeholder="Product Name" id="product_name"name="product_name"></input><br>
+              <input style="margin-bottom:15px"  type="text" placeholder="Product cost" id="product_cost"name="product_cost"></input><br>
+          </div>
+</div>
+<div>
+            <div class="lable1">
+            <lable>Product Received Date</lable><br><br>
+            <lable>Product Expairy Date</lable><br><br>
+            <lable>Quantity</lable><br><br>
+
+</div>
+<div class="input1" >
+              <input style="margin-bottom:15px" type="date" placeholder="Product Received Date" id="product_rev_date" name="product_rev_date"></input><br>
+              <input style="margin-bottom:15px" type="date" placeholder="Product Expairy Date" id="product_exp_date" name="product_exp_date"></input><br>
+              <input style="margin-bottom:15px"  type="number" placeholder="Product Quantity" id="product_quantity"name="product_quantity"></input><br>
+    <button name="create" type="submit">Create</button>
+          </div>
+</div>
+</form>
+
+    </main>
+</section>
+<div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <td>Customer Name</td>
+                <td>Customer Number</td>
+                <td>Product Name</td>
+                <td>Product Number</td>
+                <td>Product Cost</td>
+                <td>Quantity</td>
+                <td>Total Cost</td>
+                <td>Date</td>
+                <td>Edit</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+<footer>
+</footer>
+</body>
+</html>
